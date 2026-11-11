@@ -1,0 +1,40 @@
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.build/
+*.dist/
+*.onefile-build/
+*.log
+nuitka-crash-report.xml
+*.bad-encoding
+.pysidedeploy.build.spec
+artifacts/
+
+# Local application data and private configuration
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Personal plans and one-off data migration tools
+/半年学习计划.md
+/scripts/import_learning_plan.py
+/scripts/compact_learning_plan.py
+
+# Operating system and editor metadata
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

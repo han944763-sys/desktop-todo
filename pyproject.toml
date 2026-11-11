@@ -1,0 +1,41 @@
+[project]
+name = "desktop-todo"
+version = "0.1.0"
+description = "一个常驻桌面的中文待办与长期项目小工具"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "PySide6>=6.8,<7",
+]
+
+[dependency-groups]
+dev = [
+    "nuitka>=4.1.1,<5",
+    "ordered-set>=4.1,<5",
+    "pyinstaller>=6.14,<7",
+    "pytest>=8.3,<10",
+    "pytest-cov>=6,<8",
+    "zstandard>=0.23,<1",
+]
+
+[project.scripts]
+desktop-todo = "desktop_todo.app:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/desktop_todo"]
+
+[tool.hatch.build]
+include = [
+    "src/desktop_todo/**/*.py",
+    "src/desktop_todo/assets/*.svg",
+    "src/desktop_todo/assets/*.ico",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["src"]
