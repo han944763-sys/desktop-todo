@@ -1,5 +1,7 @@
 # 桌面清单 · Desktop Todo
 
+简体中文 | [English](README.en.md)
+
 一个常驻桌面的中文待办小工具，把每日任务和长期项目的下一步行动放在同一个小窗里。使用 Python、PySide6 和 SQLite，任务数据保存在本机。
 
 ## 下载 Windows 版
