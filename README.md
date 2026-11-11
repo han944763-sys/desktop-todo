@@ -6,12 +6,12 @@
 
 前往 **[Releases 下载页面](https://github.com/han944763-sys/desktop-todo/releases/tag/v0.1.0)**，展开 Assets，选择需要的 EXE。下载后双击运行，无需安装 Python。
 
-| 文件 | 版本区别 |
-| --- | --- |
-| 桌面清单-少看手机版.exe | 包含完成分组，以及第三页“少看手机”：四点提醒和可编辑的碎片时间小菜单。 |
-| 桌面清单-完成分组版.exe | 较早的版本，每日任务按“未完成”和“已完成”分组，打勾后即时移动，取消勾选后恢复。 |
+| 版本 | 直接下载 | 版本区别 |
+| --- | --- | --- |
+| 桌面清单-少看手机版.exe | [DesktopTodo-LessPhone.exe](https://github.com/han944763-sys/desktop-todo/releases/download/v0.1.0/DesktopTodo-LessPhone.exe) | 包含完成分组，以及第三页“少看手机”：四点提醒和可编辑的碎片时间小菜单。 |
+| 桌面清单-完成分组版.exe | [DesktopTodo-TaskGroups.exe](https://github.com/han944763-sys/desktop-todo/releases/download/v0.1.0/DesktopTodo-TaskGroups.exe) | 较早的版本，每日任务按“未完成”和“已完成”分组，打勾后即时移动，取消勾选后恢复。 |
 
-两个 EXE 为原有历史构建，本次发布未重新编译。仓库保存当前源码，已包含完成分组和少看手机功能；不提供完成分组旧版的独立源码快照。文件大小和 SHA-256 见 [发布说明](docs/releases/v0.1.0.md)。
+下载文件使用英文名，Release 附件标题保留原中文名称；文件内容与原始 EXE 相同。两个 EXE 为原有历史构建，本次发布未重新编译。仓库保存当前源码，已包含完成分组和少看手机功能；不提供完成分组旧版的独立源码快照。文件大小和 SHA-256 见 [发布说明](docs/releases/v0.1.0.md)。
 
 ## 功能
 
