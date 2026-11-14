@@ -2,7 +2,13 @@
 
 简体中文 | [English](README.en.md)
 
-一个常驻桌面的中文待办小工具，把每日任务和长期项目的下一步行动放在同一个小窗里。使用 Python、PySide6 和 SQLite，任务数据保存在本机。
+一个常驻桌面的中文待办小工具，把每日任务和长期项目的下一步行动放在同一个小窗里。Windows 版使用 Python 和 PySide6，macOS 版「每日便签」使用 Swift、AppKit 和 SwiftUI。两版都将任务存入本机 SQLite 数据库。
+
+## 下载 macOS 版
+
+[下载每日便签 DMG（Apple 芯片）](https://github.com/han944763-sys/desktop-todo/releases/download/macos-v1.0.0/DailyNote-macOS-arm64.dmg) · [发布说明](https://github.com/han944763-sys/desktop-todo/releases/tag/macos-v1.0.0) · [源码与使用说明](macos/)
+
+要求 macOS 13 或以上。打开 DMG，把「每日便签」拖入「应用程序」。该构建使用本机签名，未经过 Apple 公证。如遇到系统拦截，可按[源码安装说明](macos/#构建与检查)在本机安装。
 
 ## 下载 Windows 版
 
@@ -15,7 +21,7 @@
 
 下载文件使用英文名，Release 附件标题保留原中文名称；文件内容与原始 EXE 相同。两个 EXE 为原有历史构建，本次发布未重新编译。仓库保存当前源码，已包含完成分组和少看手机功能；不提供完成分组旧版的独立源码快照。文件大小和 SHA-256 见 [发布说明](docs/releases/v0.1.0.md)。
 
-## 功能
+## Windows 版功能
 
 - 按日期添加、修改、完成、恢复和删除任务，月历支持查看有任务的日期。
 - 完成项移入已完成分组，两组内部保持创建顺序；未完成任务不会自动顺延到第二天。
@@ -37,7 +43,7 @@ Windows 任务数据库位于：
 
 两个版本使用相同的数据目录和单实例机制。切换版本前先从托盘完全退出，建议先备份上述数据目录；新电脑不会自动同步原电脑的数据。偏好设置也保存在本机。
 
-## 从源码运行
+## 从源码运行 Windows 版
 
 当前项目使用 Python 3.12。安装 [uv](https://docs.astral.sh/uv/getting-started/installation/) 后，在终端执行：
 
@@ -65,12 +71,12 @@ Windows 默认输出 `dist/桌面清单.exe`。构建脚本优先使用 `pyside6
 
 指定文件名只影响产物名称；构建内容始终来自当前源码，不会还原旧版功能。
 
-## macOS 状态
+## Python 版 macOS 构建说明
 
-已准备 macOS 适配和构建脚本，尚未在 Mac 上构建或完成实机验证，本次不提供 Mac 安装包。详见 [macOS 构建说明](MACOS.md) 和 [M2 构建步骤](开始使用-M2.md)。
+根目录下的 Python/PySide6 版也有 macOS 构建脚本，见 [macOS 构建说明](MACOS.md) 和 [M2 构建步骤](开始使用-M2.md)。
 
 ## 验证范围
 
 2026-11-11 在 Windows 的现有 Python 环境中运行，当前源码的 25 项自动测试通过，包括任务分组、少看手机页面及数据保存等用例。这不代表已完成两个历史 EXE 的完整人工交互、真实输入法候选框、重启自启动、多显示器和长期运行验证。
 
-源码仓库不包含个人待办数据库、个人学习计划、本地虚拟环境或历史构建目录；Windows EXE 作为 Release 附件单独提供。
+源码仓库不包含个人待办数据库、个人学习计划、本地虚拟环境或历史构建目录。Windows EXE 和 macOS DMG 均作为 Release 附件提供。
